@@ -1,4 +1,4 @@
-# test-elasticsearch
+# Elasticsearch Python Client Profiling
 
 This is a test repository that allows me to compare the official Elasticsearch client and a minimalist `asyncio` client.
 
