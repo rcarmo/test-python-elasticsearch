@@ -6,7 +6,7 @@ This is a test repository that allows me to compare the official Elasticsearch c
 
 The idea is to map out code structure and identify possible bottlenecks by profiling some REST API operations (starting with `GET /_nodes/_all`), and figure out how an `asyncio`/`aiohttp` implementation might differ.
 
-The `aioelastic` folder contains a shim client based on my [`aioazstorage`](https://github.com/rcarmo/aioazstorage) wrappers
+The `aioelastic` folder contains a shim client based on my [`aioazstorage`](https://github.com/rcarmo/aioazstorage) wrappers that does the bare minimum required to talk to the server but tries to a) parse replies as fast as possible (using `ujson`) and provide a fully async interface (through an async generator for enumerating nodes).
 
 ## Usage
 
