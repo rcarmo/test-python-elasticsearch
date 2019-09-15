@@ -20,6 +20,10 @@ These were generated on an i5 iMac with Python 3.7.4 (installed via `brew` and `
 
 Besides using `feedparser` (which is interesting) the official client spends most of its time inside `recv_into`:
 
+![](official-client/elastic.png)
+
 ### `aioelastic`
 
-Note that `aioelastic` does some date formatting and `uuid` generation upon every request (which I find invaluable for tracing request), but otherwise spends most of its time inside `select.kqueue` (since I'm using `uvloop`):
+`aioelastic` does some date formatting and `uuid` generation upon every request (which I find invaluable for tracing requests), but otherwise spends most of its time inside `select.kqueue` (since I'm using `uvloop`):
+
+![](aioelastic/aioelastic.png)
